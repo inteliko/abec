@@ -32,10 +32,10 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <span className="text-coral font-semibold text-sm uppercase tracking-wider">
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Success Stories
           </span>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mt-3 mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
             What Our Students Say
           </h2>
           <p className="text-muted-foreground leading-relaxed">
@@ -53,7 +53,7 @@ const TestimonialsSection = () => {
               transition={{ delay: i * 0.1 }}
               className="bg-card rounded-xl p-7 border shadow-sm relative"
             >
-              <Quote className="w-8 h-8 text-coral/20 absolute top-6 right-6" />
+              <Quote className="w-8 h-8 text-primary/20 absolute top-6 right-6" />
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: t.rating }).map((_, j) => (
                   <Star
@@ -66,7 +66,7 @@ const TestimonialsSection = () => {
                 "{t.text}"
               </p>
               <div>
-                <p className="font-heading font-semibold text-primary">{t.name}</p>
+                <p className="font-heading font-semibold text-foreground">{t.name}</p>
                 <p className="text-muted-foreground text-xs">{t.university}</p>
               </div>
             </motion.div>

@@ -23,16 +23,15 @@ const CTASection = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-coral hover:bg-coral-light text-accent-foreground font-semibold px-8 py-6 text-base"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold px-8 py-6 text-base"
               >
                 Book a FREE Consultation
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
           </div>
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-coral/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-coral/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-foreground/5 rounded-full translate-y-1/2 -translate-x-1/2" />
         </motion.div>
       </div>
     </section>

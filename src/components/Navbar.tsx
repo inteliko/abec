@@ -1,24 +1,33 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpg";
+
+const destinations = [
+  { label: "Study in Australia", path: "/study-in-australia" },
+  { label: "Study in UK", path: "/study-in-uk" },
+  { label: "Study in Canada", path: "/study-in-canada" },
+  { label: "Study in USA", path: "/study-in-usa" },
+  { label: "Study in Malaysia", path: "/study-in-malaysia" },
+];
 
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
   { label: "Services", path: "/services" },
-  { label: "Study in Australia", path: "/study-in-australia" },
   { label: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [destOpen, setDestOpen] = useState(false);
   const location = useLocation();
 
   return (
     <>
       {/* Top bar */}
-      <div className="bg-navy text-primary-foreground text-sm py-2 hidden md:block">
+      <div className="bg-brand text-primary-foreground text-sm py-2 hidden md:block">
         <div className="container flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5">
@@ -40,9 +49,7 @@ const Navbar = () => {
       <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b shadow-sm">
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <span className="font-heading text-2xl md:text-3xl font-bold text-primary">
-              ABEC<span className="text-coral">edu</span>
-            </span>
+            <img src={logo} alt="ABECedu Logo" className="h-12 md:h-14 w-auto" />
           </Link>
 
           {/* Desktop */}
@@ -53,18 +60,54 @@ const Navbar = () => {
                 to={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   location.pathname === link.path
-                    ? "bg-accent/10 text-coral"
-                    : "text-foreground/80 hover:text-coral hover:bg-accent/5"
+                    ? "bg-primary/10 text-primary"
+                    : "text-foreground/80 hover:text-primary hover:bg-primary/5"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
+
+            {/* Destinations dropdown */}
+            <div className="relative">
+              <button
+                onMouseEnter={() => setDestOpen(true)}
+                onMouseLeave={() => setDestOpen(false)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
+                  location.pathname.startsWith("/study-in")
+                    ? "bg-primary/10 text-primary"
+                    : "text-foreground/80 hover:text-primary hover:bg-primary/5"
+                }`}
+              >
+                Destinations <ChevronDown className="w-3.5 h-3.5" />
+              </button>
+              {destOpen && (
+                <div
+                  onMouseEnter={() => setDestOpen(true)}
+                  onMouseLeave={() => setDestOpen(false)}
+                  className="absolute top-full left-0 mt-0 bg-card border rounded-xl shadow-lg py-2 min-w-[200px] z-50"
+                >
+                  {destinations.map((d) => (
+                    <Link
+                      key={d.path}
+                      to={d.path}
+                      className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
+                        location.pathname === d.path
+                          ? "text-primary bg-primary/5"
+                          : "text-foreground/80 hover:text-primary hover:bg-primary/5"
+                      }`}
+                    >
+                      {d.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="hidden lg:block">
             <Link to="/contact">
-              <Button className="bg-coral hover:bg-coral-light text-accent-foreground font-semibold px-6">
+              <Button className="bg-primary hover:bg-brand-light text-primary-foreground font-semibold px-6">
                 Book Free Consultation
               </Button>
             </Link>
@@ -89,16 +132,33 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block px-6 py-3 text-sm font-medium ${
                   location.pathname === link.path
-                    ? "text-coral bg-accent/5"
+                    ? "text-primary bg-primary/5"
                     : "text-foreground/80"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
+            <div className="px-6 py-2">
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Destinations</p>
+              {destinations.map((d) => (
+                <Link
+                  key={d.path}
+                  to={d.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-2 py-2.5 text-sm font-medium ${
+                    location.pathname === d.path
+                      ? "text-primary"
+                      : "text-foreground/80"
+                  }`}
+                >
+                  {d.label}
+                </Link>
+              ))}
+            </div>
             <div className="px-6 pt-2">
               <Link to="/contact" onClick={() => setIsOpen(false)}>
-                <Button className="w-full bg-coral hover:bg-coral-light text-accent-foreground font-semibold">
+                <Button className="w-full bg-primary hover:bg-brand-light text-primary-foreground font-semibold">
                   Book Free Consultation
                 </Button>
               </Link>
