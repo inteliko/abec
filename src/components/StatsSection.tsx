@@ -22,8 +22,8 @@ const StatsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="text-center"
             >
-              <div className="w-14 h-14 mx-auto mb-3 rounded-xl bg-coral/10 flex items-center justify-center">
-                <stat.icon className="w-7 h-7 text-coral" />
+              <div className="w-14 h-14 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center">
+                <stat.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary">
                 {stat.value}

@@ -19,7 +19,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-block bg-coral/20 text-coral-light px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-coral/30"
+            className="inline-block bg-primary-foreground/20 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-primary-foreground/30"
           >
             Your Trusted Study Abroad Partner
           </motion.span>
@@ -54,7 +54,7 @@ const HeroSection = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-coral hover:bg-coral-light text-accent-foreground font-semibold px-8 py-6 text-base"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold px-8 py-6 text-base"
               >
                 Book a FREE Consultation
                 <ArrowRight className="ml-2 w-4 h-4" />

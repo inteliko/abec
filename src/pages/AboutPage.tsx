@@ -40,10 +40,10 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-coral font-semibold text-sm uppercase tracking-wider">
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
                 Our Story
               </span>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mt-3 mb-6">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
                 Empowering Students to Achieve Global Education
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -60,7 +60,7 @@ const AboutPage = () => {
                   { val: "5+", label: "Countries" },
                 ].map((s) => (
                   <div key={s.label} className="bg-secondary rounded-lg p-4 text-center">
-                    <p className="font-heading text-xl font-bold text-coral">{s.val}</p>
+                    <p className="font-heading text-xl font-bold text-primary">{s.val}</p>
                     <p className="text-muted-foreground text-xs mt-1">{s.label}</p>
                   </div>
                 ))}
@@ -87,21 +87,9 @@ const AboutPage = () => {
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              {
-                icon: Target,
-                title: "Our Mission",
-                desc: "To provide honest, reliable, and comprehensive guidance to students aspiring to study abroad, ensuring they find the best-fit institutions for their academic and career goals.",
-              },
-              {
-                icon: Eye,
-                title: "Our Vision",
-                desc: "To be the most trusted study abroad consultancy in Bangladesh, known for transparency, student success, and building lasting relationships with global universities.",
-              },
-              {
-                icon: Heart,
-                title: "Our Values",
-                desc: "Integrity, student-first approach, transparency in processes, and commitment to excellence drive everything we do at ABECedu.",
-              },
+              { icon: Target, title: "Our Mission", desc: "To provide honest, reliable, and comprehensive guidance to students aspiring to study abroad, ensuring they find the best-fit institutions for their academic and career goals." },
+              { icon: Eye, title: "Our Vision", desc: "To be the most trusted study abroad consultancy in Bangladesh, known for transparency, student success, and building lasting relationships with global universities." },
+              { icon: Heart, title: "Our Values", desc: "Integrity, student-first approach, transparency in processes, and commitment to excellence drive everything we do at ABECedu." },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
@@ -111,10 +99,10 @@ const AboutPage = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-card rounded-xl p-8 border text-center"
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-coral/10 flex items-center justify-center">
-                  <item.icon className="w-7 h-7 text-coral" />
+                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <item.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-heading font-semibold text-lg text-primary mb-3">
+                <h3 className="font-heading font-semibold text-lg text-foreground mb-3">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">

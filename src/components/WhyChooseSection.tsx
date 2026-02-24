@@ -12,7 +12,7 @@ const reasons = [
 
 const WhyChooseSection = () => {
   return (
-    <section className="py-20 bg-navy text-primary-foreground overflow-hidden">
+    <section className="py-20 hero-gradient text-primary-foreground overflow-hidden">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -20,7 +20,7 @@ const WhyChooseSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-coral font-semibold text-sm uppercase tracking-wider">
+            <span className="text-brand-light font-semibold text-sm uppercase tracking-wider">
               Why Choose ABEC
             </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-3 mb-6">
@@ -42,7 +42,7 @@ const WhyChooseSection = () => {
                   transition={{ delay: i * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-coral mt-0.5 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-light mt-0.5 shrink-0" />
                   <span className="text-primary-foreground/80">{reason}</span>
                 </motion.li>
               ))}
@@ -55,7 +55,6 @@ const WhyChooseSection = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            {/* Process steps */}
             <div className="space-y-6">
               {[
                 { step: "01", title: "Consult", desc: "Meet our expert counselors for a free consultation" },
@@ -71,8 +70,8 @@ const WhyChooseSection = () => {
                   transition={{ delay: i * 0.15 }}
                   className="flex gap-5 items-start group"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-coral/20 flex items-center justify-center shrink-0 group-hover:bg-coral transition-colors">
-                    <span className="font-heading font-bold text-coral group-hover:text-accent-foreground transition-colors">
+                  <div className="w-14 h-14 rounded-xl bg-primary-foreground/20 flex items-center justify-center shrink-0 group-hover:bg-primary-foreground/30 transition-colors">
+                    <span className="font-heading font-bold text-primary-foreground">
                       {item.step}
                     </span>
                   </div>

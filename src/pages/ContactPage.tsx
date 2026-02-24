@@ -29,7 +29,6 @@ const ContactPage = () => {
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero */}
       <section className="hero-gradient py-20 md:py-28">
         <div className="container text-center">
           <motion.h1
@@ -53,10 +52,9 @@ const ContactPage = () => {
       <section className="py-20">
         <div className="container">
           <div className="grid lg:grid-cols-5 gap-12">
-            {/* Contact Info */}
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="font-heading text-2xl font-bold text-primary mb-6">
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
                   Get in Touch
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -65,48 +63,27 @@ const ContactPage = () => {
               </div>
 
               {[
-                {
-                  icon: MapPin,
-                  title: "Banani Office",
-                  details: "Banani, Dhaka, Bangladesh",
-                },
-                {
-                  icon: MapPin,
-                  title: "Kawran Bazar Office",
-                  details: "Kawran Bazar, Dhaka, Bangladesh",
-                },
-                {
-                  icon: Phone,
-                  title: "Phone",
-                  details: "+880 1XXX-XXXXXX",
-                },
-                {
-                  icon: Mail,
-                  title: "Email",
-                  details: "info@abecedu.net",
-                },
-                {
-                  icon: Clock,
-                  title: "Office Hours",
-                  details: "Sun - Thu: 10:00 AM - 6:00 PM",
-                },
+                { icon: MapPin, title: "Banani Office", details: "Banani, Dhaka, Bangladesh" },
+                { icon: MapPin, title: "Kawran Bazar Office", details: "Kawran Bazar, Dhaka, Bangladesh" },
+                { icon: Phone, title: "Phone", details: "+880 1XXX-XXXXXX" },
+                { icon: Mail, title: "Email", details: "info@abecedu.net" },
+                { icon: Clock, title: "Office Hours", details: "Sun - Thu: 10:00 AM - 6:00 PM" },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-coral/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-coral" />
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-semibold text-primary text-sm">{item.title}</h4>
+                    <h4 className="font-heading font-semibold text-foreground text-sm">{item.title}</h4>
                     <p className="text-muted-foreground text-sm">{item.details}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Form */}
             <div className="lg:col-span-3">
               <div className="bg-card rounded-xl border shadow-sm p-8">
-                <h3 className="font-heading text-xl font-bold text-primary mb-6">
+                <h3 className="font-heading text-xl font-bold text-foreground mb-6">
                   Book a Free Consultation
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -120,20 +97,15 @@ const ContactPage = () => {
                       <Input type="email" placeholder="your@email.com" required />
                     </div>
                   </div>
-
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
                       <Input placeholder="+880 1XXX-XXXXXX" required />
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">
-                        Purpose of Contact
-                      </label>
+                      <label className="text-sm font-medium text-foreground mb-1.5 block">Purpose of Contact</label>
                       <Select>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select purpose" />
-                        </SelectTrigger>
+                        <SelectTrigger><SelectValue placeholder="Select purpose" /></SelectTrigger>
                         <SelectContent>
                           <SelectItem value="study">Study Abroad</SelectItem>
                           <SelectItem value="migration">Migration</SelectItem>
@@ -143,15 +115,10 @@ const ContactPage = () => {
                       </Select>
                     </div>
                   </div>
-
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1.5 block">
-                      Preferred Destination
-                    </label>
+                    <label className="text-sm font-medium text-foreground mb-1.5 block">Preferred Destination</label>
                     <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select country" />
-                      </SelectTrigger>
+                      <SelectTrigger><SelectValue placeholder="Select country" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="australia">Australia</SelectItem>
                         <SelectItem value="uk">United Kingdom</SelectItem>
@@ -161,31 +128,24 @@ const ContactPage = () => {
                       </SelectContent>
                     </Select>
                   </div>
-
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1.5 block">
-                      Nearest ABEC Office
-                    </label>
+                    <label className="text-sm font-medium text-foreground mb-1.5 block">Nearest ABEC Office</label>
                     <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select office" />
-                      </SelectTrigger>
+                      <SelectTrigger><SelectValue placeholder="Select office" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="banani">Banani, Dhaka</SelectItem>
                         <SelectItem value="kawran">Kawran Bazar, Dhaka</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
-
                   <div>
                     <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
                     <Textarea placeholder="Tell us about your study plans..." rows={4} />
                   </div>
-
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-coral hover:bg-coral-light text-accent-foreground font-semibold py-6"
+                    className="w-full bg-primary hover:bg-brand-light text-primary-foreground font-semibold py-6"
                   >
                     {isSubmitting ? "Sending..." : "Submit Enquiry"}
                   </Button>
