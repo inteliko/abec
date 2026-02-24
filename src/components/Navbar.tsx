@@ -32,7 +32,7 @@ const Navbar = () => {
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5" />
-              +880 1XXX-XXXXXX
+              +8801730028095 
             </span>
             <span className="flex items-center gap-1.5">
               <Mail className="w-3.5 h-3.5" />
@@ -40,7 +40,7 @@ const Navbar = () => {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <span>Banani, Dhaka | Kawran Bazar, Dhaka</span>
+            <span>Uttara, Dhaka | Kawran Bazar, Dhaka</span>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
       <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b shadow-sm">
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="ABECedu Logo" className="h-12 md:h-14 w-auto" />
+            <img src={logo} alt="ABEC Logo" className="h-12 md:h-14 w-auto" />
           </Link>
 
           {/* Desktop */}

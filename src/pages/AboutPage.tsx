@@ -18,7 +18,7 @@ const AboutPage = () => {
             animate={{ opacity: 1, y: 0 }}
             className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4"
           >
-            About ABECedu
+            About ABEC
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -47,10 +47,14 @@ const AboutPage = () => {
                 Empowering Students to Achieve Global Education
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                ABECedu has been inspiring students to excel in their higher education aspirations by helping them choose the right university abroad. As an official representative in Bangladesh for well-reputed universities, we bridge the gap between aspiring students and world-class institutions.
+                Australia Bangladesh Education Consultants (ABEC) is a sister concern of Australia Bangladesh Development Associate Ltd (ABDA), which has emerged as the leading recruiter of  students of students for overseas education to Australia, Canada, United Kingdom and USA and provides professional immigration consultancy to the clients for Australia, Canada and USA.
+              </p>
+
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Being the pioneer in providing consultancy service in overseas services in overseas education and immigration service since 1999, we provides most up-to-date information toÂ  clients and always ensures the satisfaction of our clients. For our extra-ordinary service and increasing success rate, we already established us as a market leader in this field. ABEC has incomparable success rate (more that 30% apx.) of fulfilling the dream of Bangladeshi student to take higher study in Australia.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Our team of experienced counselors provides personalized guidance at every step — from choosing the right course to settling into your new campus life. With offices in Banani and Kawran Bazar, Dhaka, we are always within reach.
+                Our team of experienced counselors provides personalized guidance at every step — from choosing the right course to settling into your new campus life. With offices in Uttara and Kawran Bazar, Dhaka, we are always within reach.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -74,7 +78,7 @@ const AboutPage = () => {
             >
               <img
                 src={aboutTeam}
-                alt="ABECedu team"
+                alt="ABEC team"
                 className="rounded-2xl shadow-xl w-full object-cover"
               />
             </motion.div>
@@ -89,7 +93,7 @@ const AboutPage = () => {
             {[
               { icon: Target, title: "Our Mission", desc: "To provide honest, reliable, and comprehensive guidance to students aspiring to study abroad, ensuring they find the best-fit institutions for their academic and career goals." },
               { icon: Eye, title: "Our Vision", desc: "To be the most trusted study abroad consultancy in Bangladesh, known for transparency, student success, and building lasting relationships with global universities." },
-              { icon: Heart, title: "Our Values", desc: "Integrity, student-first approach, transparency in processes, and commitment to excellence drive everything we do at ABECedu." },
+              { icon: Heart, title: "Our Values", desc: "Integrity, student-first approach, transparency in processes, and commitment to excellence drive everything we do at ABEC." },
             ].map((item, i) => (
               <motion.div
                 key={item.title}

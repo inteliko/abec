@@ -14,6 +14,9 @@ import StudyMalaysiaPage from "./pages/StudyMalaysiaPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
+// floating WhatsApp button
+import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -21,6 +24,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <WhatsAppFloatingButton />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />

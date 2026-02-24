@@ -23,8 +23,9 @@ const partnerNames = [
 
 const StudyMalaysiaPage = () => {
   return (
-    <div className="min-h-screen">
+    <>
       <Navbar />
+      <div className="min-h-screen pt-24 md:pt-28">
       <CountryPageLayout
         country="Malaysia"
         heroImage={malaysiaImg}
@@ -40,7 +41,8 @@ const StudyMalaysiaPage = () => {
         partnerNames={partnerNames}
       />
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

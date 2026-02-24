@@ -27,7 +27,7 @@ const WhyChooseSection = () => {
               Your Success is Our Only Priority
             </h2>
             <p className="text-primary-foreground/70 leading-relaxed mb-8">
-              Since our inception, ABECedu has been inspiring students to excel
+              Since our inception, ABEC has been inspiring students to excel
               in their higher education aspirations by helping them choose the
               right university abroad. We are the official representative in
               Bangladesh for well-reputed universities across multiple countries.

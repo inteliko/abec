@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <img src={logo} alt="ABECedu Logo" className="h-14 w-auto mb-4 brightness-0 invert" />
+            <img src={logo} alt="ABEC Logo" className="h-14 w-auto mb-4 brightness-0 invert" />
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
               Your trusted partner for studying abroad. We help students navigate
-              their journey to top universities across Australia, UK, Canada, USA, and Malaysia.
+              their journey to top universities across Australia, UK, Canada, USA, Malaysia and many
             </p>
             <div className="flex gap-3">
               {[Facebook, Instagram, Linkedin, Youtube].map((Icon, i) => (
@@ -79,12 +79,12 @@ const Footer = () => {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 mt-0.5 text-brand-light shrink-0" />
                 <span className="text-primary-foreground/70">
-                  Banani, Dhaka & Kawran Bazar, Dhaka
+                   57 Kazi Nazrul Islam Ave, Dhaka 1215
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-light shrink-0" />
-                <span className="text-primary-foreground/70">+880 1XXX-XXXXXX</span>
+                <span className="text-primary-foreground/70">+8801730028095 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-light shrink-0" />
@@ -97,7 +97,7 @@ const Footer = () => {
 
       <div className="border-t border-primary-foreground/10">
         <div className="container py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-primary-foreground/50">
-          <p>© 2025 ABECedu. All rights reserved.</p>
+          <p>© 2025 ABEC. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary-foreground transition-colors">Terms & Conditions</a>

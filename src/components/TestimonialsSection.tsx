@@ -10,13 +10,13 @@ const testimonials = [
   },
   {
     name: "Shafayet Islam",
-    text: "ABECedu offered me a friendly environment where I could share my initial preferences for higher studies. The counselors understood my needs perfectly and guided me to the right program.",
+    text: "ABEC offered me a friendly environment where I could share my initial preferences for higher studies. The counselors understood my needs perfectly and guided me to the right program.",
     university: "Western Sydney University",
     rating: 5,
   },
   {
     name: "Sandip Saha",
-    text: "I am very thankful to the entire ABECedu team for their immense support throughout the whole process to make my dream of studying in Australia a success.",
+    text: "I am very thankful to the entire ABEC team for their immense support throughout the whole process to make my dream of studying in Australia a success.",
     university: "Central Queensland University",
     rating: 5,
   },

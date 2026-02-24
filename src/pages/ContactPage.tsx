@@ -63,11 +63,11 @@ const ContactPage = () => {
               </div>
 
               {[
-                { icon: MapPin, title: "Banani Office", details: "Banani, Dhaka, Bangladesh" },
-                { icon: MapPin, title: "Kawran Bazar Office", details: "Kawran Bazar, Dhaka, Bangladesh" },
-                { icon: Phone, title: "Phone", details: "+880 1XXX-XXXXXX" },
+                { icon: MapPin, title: "Uttara Office", details: "House-02, Road-2/A, Sonargaon Janapath Rd, Dhaka" },
+                { icon: MapPin, title: "Kawran Bazar Office", details: "57 Kazi Nazrul Islam Ave, Dhaka 1215" },
+                { icon: Phone, title: "Phone", details: "+8801730028095 " },
                 { icon: Mail, title: "Email", details: "info@abecedu.net" },
-                { icon: Clock, title: "Office Hours", details: "Sun - Thu: 10:00 AM - 6:00 PM" },
+                { icon: Clock, title: "Office Hours", details: "Sat - Thu: 10:00 AM - 6:00 PM" },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -100,7 +100,7 @@ const ContactPage = () => {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
-                      <Input placeholder="+880 1XXX-XXXXXX" required />
+                      <Input placeholder="+8801730028095 " required />
                     </div>
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Purpose of Contact</label>
