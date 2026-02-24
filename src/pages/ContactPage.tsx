@@ -1,0 +1,204 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const ContactPage = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you shortly.",
+      });
+    }, 1000);
+  };
+
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+
+      {/* Hero */}
+      <section className="hero-gradient py-20 md:py-28">
+        <div className="container text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4"
+          >
+            Contact Us
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-primary-foreground/70 text-lg max-w-2xl mx-auto"
+          >
+            Book a free consultation with our expert counselors today
+          </motion.p>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container">
+          <div className="grid lg:grid-cols-5 gap-12">
+            {/* Contact Info */}
+            <div className="lg:col-span-2 space-y-8">
+              <div>
+                <h2 className="font-heading text-2xl font-bold text-primary mb-6">
+                  Get in Touch
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  We are here to help! Reach out to us at any of our convenient locations in Dhaka.
+                </p>
+              </div>
+
+              {[
+                {
+                  icon: MapPin,
+                  title: "Banani Office",
+                  details: "Banani, Dhaka, Bangladesh",
+                },
+                {
+                  icon: MapPin,
+                  title: "Kawran Bazar Office",
+                  details: "Kawran Bazar, Dhaka, Bangladesh",
+                },
+                {
+                  icon: Phone,
+                  title: "Phone",
+                  details: "+880 1XXX-XXXXXX",
+                },
+                {
+                  icon: Mail,
+                  title: "Email",
+                  details: "info@abecedu.net",
+                },
+                {
+                  icon: Clock,
+                  title: "Office Hours",
+                  details: "Sun - Thu: 10:00 AM - 6:00 PM",
+                },
+              ].map((item) => (
+                <div key={item.title} className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-coral/10 flex items-center justify-center shrink-0">
+                    <item.icon className="w-5 h-5 text-coral" />
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-semibold text-primary text-sm">{item.title}</h4>
+                    <p className="text-muted-foreground text-sm">{item.details}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Form */}
+            <div className="lg:col-span-3">
+              <div className="bg-card rounded-xl border shadow-sm p-8">
+                <h3 className="font-heading text-xl font-bold text-primary mb-6">
+                  Book a Free Consultation
+                </h3>
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
+                      <Input placeholder="Your full name" required />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
+                      <Input type="email" placeholder="your@email.com" required />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
+                      <Input placeholder="+880 1XXX-XXXXXX" required />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-1.5 block">
+                        Purpose of Contact
+                      </label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select purpose" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="study">Study Abroad</SelectItem>
+                          <SelectItem value="migration">Migration</SelectItem>
+                          <SelectItem value="visa">Visa Support</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-1.5 block">
+                      Preferred Destination
+                    </label>
+                    <Select>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select country" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="australia">Australia</SelectItem>
+                        <SelectItem value="uk">United Kingdom</SelectItem>
+                        <SelectItem value="canada">Canada</SelectItem>
+                        <SelectItem value="usa">USA</SelectItem>
+                        <SelectItem value="malaysia">Malaysia</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-1.5 block">
+                      Nearest ABEC Office
+                    </label>
+                    <Select>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select office" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="banani">Banani, Dhaka</SelectItem>
+                        <SelectItem value="kawran">Kawran Bazar, Dhaka</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
+                    <Textarea placeholder="Tell us about your study plans..." rows={4} />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-coral hover:bg-coral-light text-accent-foreground font-semibold py-6"
+                  >
+                    {isSubmitting ? "Sending..." : "Submit Enquiry"}
+                  </Button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default ContactPage;
