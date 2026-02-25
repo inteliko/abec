@@ -12,6 +12,8 @@ import StudyCanadaPage from "./pages/StudyCanadaPage";
 import StudyUSAPage from "./pages/StudyUSAPage";
 import StudyMalaysiaPage from "./pages/StudyMalaysiaPage";
 import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
 import NotFound from "./pages/NotFound";
 
 // floating WhatsApp button
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogPostPage />} />
           <Route path="/study-in-australia" element={<StudyAustraliaPage />} />
           <Route path="/study-in-uk" element={<StudyUKPage />} />
           <Route path="/study-in-canada" element={<StudyCanadaPage />} />
