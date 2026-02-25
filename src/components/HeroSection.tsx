@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="Students celebrating graduation" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 hero-gradient opacity-85" />
+        <div className="absolute inset-0 hero-gradient opacity-60" />
       </div>
 
       <div className="container relative z-10 py-20">
@@ -63,8 +63,7 @@ const HeroSection = () => {
             <Link to="/study-in-australia">
               <Button
                 size="lg"
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-base"
+                className="bg-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/30 border border-primary-foreground/50 font-semibold px-8 py-6 text-base"
               >
                 Explore Destinations
               </Button>
