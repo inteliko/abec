@@ -4,13 +4,13 @@ import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
-    <footer className="hero-gradient text-primary-foreground">
+    <footer className="bg-white text-black">
       <div className="container py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <img src={logo} alt="ABEC Logo" className="h-14 w-auto mb-4 brightness-0 invert" />
-            <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
+            <img src={logo} alt="ABEC Logo" className="h-14 w-auto mb-4" />
+            <p className="text-black/70 text-sm leading-relaxed mb-6">
               Your trusted partner for studying abroad. We help students navigate
               their journey to top universities across Australia, UK, Canada, USA, Malaysia and many
             </p>
@@ -19,7 +19,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href="#"
-                  className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                  className="w-9 h-9 rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition-colors"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -40,7 +40,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-black/70 hover:text-black transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -63,7 +63,7 @@ const Footer = () => {
                 <li key={item.label}>
                   <Link
                     to={item.path}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-black/70 hover:text-black transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -77,30 +77,30 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-lg mb-4">Contact Us</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 mt-0.5 text-brand-light shrink-0" />
-                <span className="text-primary-foreground/70">
+                <MapPin className="w-4 h-4 mt-0.5 text-black shrink-0" />
+                <span className="text-black/70">
                    57 Kazi Nazrul Islam Ave, Dhaka 1215
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-brand-light shrink-0" />
-                <span className="text-primary-foreground/70">+8801730028095 </span>
+                <Phone className="w-4 h-4 text-black shrink-0" />
+                <span className="text-black/70">+8801730028095 </span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-brand-light shrink-0" />
-                <span className="text-primary-foreground/70">info@abecedu.net</span>
+                <Mail className="w-4 h-4 text-black shrink-0" />
+                <span className="text-black/70">info@abecedu.net</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/10">
-        <div className="container py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-primary-foreground/50">
+      <div className="border-t border-black/10">
+        <div className="container py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-black/50">
           <p>© 2025 ABEC. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary-foreground transition-colors">Terms & Conditions</a>
+            <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-black transition-colors">Terms & Conditions</a>
           </div>
         </div>
       </div>
