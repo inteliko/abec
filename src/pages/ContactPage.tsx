@@ -54,10 +54,10 @@ const ContactPage = () => {
           <div className="grid lg:grid-cols-5 gap-12">
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+                <h2 className="font-heading text-xl font-bold text-foreground mb-6">
                   Get in Touch
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-black text-sm md:text-lg">
                   We are here to help! Reach out to us at any of our convenient locations in Dhaka.
                 </p>
               </div>
@@ -70,14 +70,20 @@ const ContactPage = () => {
                 { icon: Clock, title: "Office Hours", details: "Sat - Thu: 10:00 AM - 6:00 PM" },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-semibold text-foreground text-lg">{item.title}</h4>
-                    <p className="text-muted-foreground text-lg">{item.details}</p>
-                  </div>
-                </div>
+  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+    <item.icon className="w-5 h-5 text-black" />
+  </div>
+
+            <div>
+              <h4 className="font-heading font-semibold text-black text-xl">
+                {item.title}
+              </h4>
+
+              <p className="text-black text-lg">
+                {item.details}
+              </p>
+            </div>
+          </div>
               ))}
             </div>
 
@@ -151,6 +157,39 @@ const ContactPage = () => {
                   </Button>
                 </form>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* new maps section */}
+      <section className="py-20 bg-secondary/5">
+        <div className="container">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
+            Our Office Locations
+          </h2>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="bg-card rounded-xl shadow-sm overflow-hidden">
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg mb-2">Uttara Office</h3>
+              </div>
+              <iframe
+                src="https://www.google.com/maps?q=House-02,+Road-2/A,+Sonargaon+Janapath+Rd,+Dhaka&output=embed"
+                className="w-full h-[300px] md:h-[400px] rounded-b-xl border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div className="bg-card rounded-xl shadow-sm overflow-hidden">
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg mb-2">Kawran Bazar Office</h3>
+              </div>
+              <iframe
+                src="https://www.google.com/maps?q=57+Kazi+Nazrul+Islam+Ave,+Dhaka+1215&output=embed"
+                className="w-full h-[300px] md:h-[400px] rounded-b-xl border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
