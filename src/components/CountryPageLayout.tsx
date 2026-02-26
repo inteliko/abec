@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Calendar, Globe, Award, BookOpen, DollarSign } from "lucide-react";
@@ -119,7 +120,7 @@ const CountryPageLayout = ({
         </div>
       </section>
 
-      {/* Universities */}
+      {/* Universities as responsive tabs */}
       <section className="py-20">
         <div className="container">
           <motion.div
@@ -136,63 +137,8 @@ const CountryPageLayout = ({
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {universities.map((uni, i) => (
-              <motion.div
-                key={uni.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="bg-card rounded-xl border shadow-sm overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <div className="hero-gradient p-4">
-                  <h3 className="font-heading font-semibold text-primary-foreground text-sm">
-                    {uni.name}
-                  </h3>
-                </div>
-                <div className="p-5 space-y-3">
-                  <div className="flex items-center gap-2 text-sm">
-                    <DollarSign className="w-4 h-4 text-primary shrink-0" />
-                    <span className="text-muted-foreground">
-                      <strong className="text-foreground">Fees:</strong> {uni.fees}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Award className="w-4 h-4 text-primary shrink-0" />
-                    <span className="text-muted-foreground">
-                      <strong className="text-foreground">Scholarship:</strong> {uni.scholarship}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <BookOpen className="w-4 h-4 text-primary shrink-0" />
-                    <span className="text-muted-foreground">
-                      <strong className="text-foreground">IELTS:</strong> {uni.ielts}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-foreground mb-1.5">Programs:</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {uni.programs.slice(0, 5).map((p) => (
-                        <span key={p} className="text-xs bg-secondary px-2 py-0.5 rounded-md text-muted-foreground">
-                          {p}
-                        </span>
-                      ))}
-                      {uni.programs.length > 5 && (
-                        <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">
-                          +{uni.programs.length - 5} more
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-foreground mb-1">Locations:</p>
-                    <p className="text-xs text-muted-foreground">{uni.locations.join(" • ")}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {/* tab state */}
+          <TabSection universities={universities} />
         </div>
       </section>
 
@@ -237,6 +183,97 @@ const CountryPageLayout = ({
           </Link>
         </div>
       </section>
+    </>
+  );
+};
+
+
+
+// -- tab subcomponent for university details -----------------------------
+interface TabSectionProps {
+  universities: University[];
+}
+
+const TabSection = ({ universities }: TabSectionProps) => {
+  const [selected, setSelected] = useState(0);
+
+  const uni = universities[selected];
+
+  return (
+    <>
+      {/* tabs */}
+      <div className="w-full overflow-x-auto">
+        <div className="flex space-x-4 px-4 lg:justify-center">
+          {universities.map((u, idx) => (
+            <button
+              key={u.name}
+              onClick={() => setSelected(idx)}
+              className={
+                `shrink-0 whitespace-nowrap px-4 py-2 rounded-lg transition-colors duration-200 flex items-center justify-center ` +
+                (selected === idx
+                  ? "bg-primary text-primary-foreground shadow-md"
+                  : "bg-card text-foreground hover:bg-secondary/50")
+              }
+            >
+              {u.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* content */}
+      <motion.div
+        key={selected}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className="mt-8 bg-card rounded-xl border shadow-sm overflow-hidden"
+      >
+        <div className="hero-gradient p-4">
+          <h3 className="font-heading font-semibold text-primary-foreground text-sm">
+            {uni.name}
+          </h3>
+        </div>
+        <div className="p-5 space-y-3">
+          <div className="flex items-center gap-2 text-sm">
+            <DollarSign className="w-4 h-4 text-primary shrink-0" />
+            <span className="text-muted-foreground">
+              <strong className="text-foreground">Fees:</strong> {uni.fees}
+            </span>
+          </div>
+          <div className="flex items-center gap-2 text-sm">
+            <Award className="w-4 h-4 text-primary shrink-0" />
+            <span className="text-muted-foreground">
+              <strong className="text-foreground">Scholarship:</strong> {uni.scholarship}
+            </span>
+          </div>
+          <div className="flex items-center gap-2 text-sm">
+            <BookOpen className="w-4 h-4 text-primary shrink-0" />
+            <span className="text-muted-foreground">
+              <strong className="text-foreground">IELTS:</strong> {uni.ielts}
+            </span>
+          </div>
+          <div>
+            <p className="text-xs font-medium text-foreground mb-1.5">Programs:</p>
+            <div className="flex flex-wrap gap-1.5">
+              {uni.programs.slice(0, 5).map((p) => (
+                <span key={p} className="text-xs bg-secondary px-2 py-0.5 rounded-md text-muted-foreground">
+                  {p}
+                </span>
+              ))}
+              {uni.programs.length > 5 && (
+                <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">
+                  +{uni.programs.length - 5} more
+                </span>
+              )}
+            </div>
+          </div>
+          <div>
+            <p className="text-xs font-medium text-foreground mb-1">Locations:</p>
+            <p className="text-xs text-muted-foreground">{uni.locations.join(" • ")}</p>
+          </div>
+        </div>
+      </motion.div>
     </>
   );
 };
