@@ -60,7 +60,7 @@ const ServicesPage = () => {
                     <h3 className="font-heading font-semibold text-xl text-foreground mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                       {service.description}
                     </p>
                     <div className="grid grid-cols-2 gap-2">

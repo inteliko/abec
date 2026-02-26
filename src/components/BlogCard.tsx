@@ -22,11 +22,11 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
         className="w-full h-48 object-cover"
       />
       <div className="p-6">
-        <p className="text-sm text-muted-foreground mb-2">{post.date}</p>
+        <p className="text-lg text-muted-foreground mb-2">{post.date}</p>
         <h3 className="font-heading font-semibold text-xl mb-2">
           {post.title}
         </h3>
-        <p className="text-sm text-muted-foreground mb-4">{post.excerpt}</p>
+        <p className="text-lg text-muted-foreground mb-4">{post.excerpt}</p>
         <Link
           to={`/blog/${post.id}`}
           className="text-primary font-semibold hover:underline"

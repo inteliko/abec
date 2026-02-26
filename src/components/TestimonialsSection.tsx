@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+          <span className="text-primary font-semibold text-lg uppercase tracking-wider">
             Success Stories
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
                   />
                 ))}
               </div>
-              <p className="text-foreground/80 text-sm leading-relaxed mb-5">
+              <p className="text-foreground/80 text-lg leading-relaxed mb-5">
                 "{t.text}"
               </p>
               <div>

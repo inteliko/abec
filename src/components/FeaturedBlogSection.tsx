@@ -59,7 +59,7 @@ const FeaturedBlogSection = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+          <span className="text-primary font-semibold text-lg uppercase tracking-wider">
             Study Abroad Insights
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
@@ -102,12 +102,12 @@ const FeaturedBlogSection = () => {
                 <h3 className="font-heading font-semibold text-lg text-foreground mb-3 line-clamp-2">
                   {post.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                <p className="text-lg text-muted-foreground mb-4 line-clamp-2">
                   {post.excerpt}
                 </p>
                 <Link
                   to={`/blog/${post.id}`}
-                  className="text-primary font-semibold text-sm hover:underline flex items-center gap-1 group/link"
+                  className="text-primary font-semibold text-lg hover:underline flex items-center gap-1 group/link"
                 >
                   Read More
                   <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />

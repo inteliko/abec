@@ -51,7 +51,7 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+          <span className="text-primary font-semibold text-lg uppercase tracking-wider">
             Our Services
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
@@ -78,7 +78,7 @@ const ServicesSection = () => {
               <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 {service.description}
               </p>
             </motion.div>

@@ -50,7 +50,7 @@ const DestinationsSection = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+          <span className="text-primary font-semibold text-lg uppercase tracking-wider">
             Explore Destinations
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
@@ -83,10 +83,10 @@ const DestinationsSection = () => {
                     <h3 className="font-heading text-xl font-bold text-primary-foreground mb-1">
                       Study in {dest.name}
                     </h3>
-                    <p className="text-primary-foreground/70 text-sm mb-3">
+                    <p className="text-primary-foreground/70 text-lg mb-3">
                       {dest.description}
                     </p>
-                    <span className="inline-flex items-center text-brand-light text-sm font-medium group-hover:gap-2 transition-all">
+                    <span className="inline-flex items-center text-brand-light text-lg font-medium group-hover:gap-2 transition-all">
                       Explore More <ArrowRight className="w-4 h-4 ml-1" />
                     </span>
                   </div>

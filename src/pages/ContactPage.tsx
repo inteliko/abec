@@ -74,8 +74,8 @@ const ContactPage = () => {
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-semibold text-foreground text-sm">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm">{item.details}</p>
+                    <h4 className="font-heading font-semibold text-foreground text-lg">{item.title}</h4>
+                    <p className="text-muted-foreground text-lg">{item.details}</p>
                   </div>
                 </div>
               ))}
@@ -89,21 +89,21 @@ const ContactPage = () => {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
+                      <label className="text-lg font-medium text-foreground mb-1.5 block">Name</label>
                       <Input placeholder="Your full name" required />
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
+                      <label className="text-lg font-medium text-foreground mb-1.5 block">Email</label>
                       <Input type="email" placeholder="your@email.com" required />
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
+                      <label className="text-lg font-medium text-foreground mb-1.5 block">Phone</label>
                       <Input placeholder="+8801730028095 " required />
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Purpose of Contact</label>
+                      <label className="text-lg font-medium text-foreground mb-1.5 block">Purpose of Contact</label>
                       <Select>
                         <SelectTrigger><SelectValue placeholder="Select purpose" /></SelectTrigger>
                         <SelectContent>
@@ -116,7 +116,7 @@ const ContactPage = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1.5 block">Preferred Destination</label>
+                    <label className="text-lg font-medium text-foreground mb-1.5 block">Preferred Destination</label>
                     <Select>
                       <SelectTrigger><SelectValue placeholder="Select country" /></SelectTrigger>
                       <SelectContent>
@@ -129,7 +129,7 @@ const ContactPage = () => {
                     </Select>
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1.5 block">Nearest ABEC Office</label>
+                    <label className="text-lg font-medium text-foreground mb-1.5 block">Nearest ABEC Office</label>
                     <Select>
                       <SelectTrigger><SelectValue placeholder="Select office" /></SelectTrigger>
                       <SelectContent>
@@ -139,7 +139,7 @@ const ContactPage = () => {
                     </Select>
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
+                    <label className="text-lg font-medium text-foreground mb-1.5 block">Message</label>
                     <Textarea placeholder="Tell us about your study plans..." rows={4} />
                   </div>
                   <Button

@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <img src={logo} alt="ABEC Logo" className="h-14 w-auto mb-4" />
-            <p className="text-black/70 text-sm leading-relaxed mb-6">
+            <p className="text-black/70 text-lg leading-relaxed mb-6">
               Your trusted partner for studying abroad. We help students navigate
               their journey to top universities across Australia, UK, Canada, USA, Malaysia and many
             </p>
@@ -30,7 +30,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-lg">
               {[
                 { label: "Home", path: "/" },
                 { label: "About Us", path: "/about" },
@@ -53,7 +53,7 @@ const Footer = () => {
           {/* Study Destinations */}
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Study Destinations</h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-lg">
               {[
                 { label: "Australia", path: "/study-in-australia" },
                 { label: "United Kingdom", path: "/study-in-uk" },
@@ -76,7 +76,7 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Contact Us</h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-lg">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 mt-0.5 text-black shrink-0" />
                 <span className="text-black/70">
@@ -97,7 +97,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-black/10">
-        <div className="container py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-black/50">
+        <div className="container py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-lg text-black/50">
           <p>© 2025 ABEC. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>

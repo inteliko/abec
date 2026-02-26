@@ -20,7 +20,7 @@ const WhyChooseSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-brand-light font-semibold text-sm uppercase tracking-wider">
+            <span className="text-brand-light font-semibold text-lg uppercase tracking-wider">
               Why Choose ABEC
             </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-3 mb-6">
@@ -77,7 +77,7 @@ const WhyChooseSection = () => {
                   </div>
                   <div>
                     <h4 className="font-heading font-semibold text-lg">{item.title}</h4>
-                    <p className="text-primary-foreground/60 text-sm">{item.desc}</p>
+                    <p className="text-primary-foreground/60 text-lg">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}

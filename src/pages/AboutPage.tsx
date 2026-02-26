@@ -40,7 +40,7 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+              <span className="text-primary font-semibold text-lg uppercase tracking-wider">
                 Our Story
               </span>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
@@ -109,7 +109,7 @@ const AboutPage = () => {
                 <h3 className="font-heading font-semibold text-lg text-foreground mb-3">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>

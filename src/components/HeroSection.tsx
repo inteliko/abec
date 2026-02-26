@@ -19,7 +19,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-block bg-primary-foreground/20 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-primary-foreground/30"
+            className="inline-block bg-primary-foreground/20 text-primary-foreground px-4 py-1.5 rounded-full text-lg font-medium mb-6 border border-primary-foreground/30"
           >
             Your Trusted Study Abroad Partner
           </motion.span>
@@ -54,7 +54,7 @@ const HeroSection = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold px-8 py-6 text-base"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold px-8 py-6 text-lg"
               >
                 Book a FREE Consultation
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -63,7 +63,7 @@ const HeroSection = () => {
             <Link to="/study-in-australia">
               <Button
                 size="lg"
-                className="bg-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/30 border border-primary-foreground/50 font-semibold px-8 py-6 text-base"
+                className="bg-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/30 border border-primary-foreground/50 font-semibold px-8 py-6 text-lg"
               >
                 Explore Destinations
               </Button>

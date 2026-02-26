@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-brand text-primary-foreground text-sm py-2 hidden md:block">
+      <div className="bg-brand text-primary-foreground text-lg py-2 hidden md:block">
         <div className="container flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5">
@@ -59,7 +59,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-4 py-2 rounded-lg text-lg font-medium transition-colors ${
                   location.pathname === link.path
                     ? "bg-primary/10 text-primary"
                     : "text-foreground/80 hover:text-primary hover:bg-primary/5"
@@ -74,7 +74,7 @@ const Navbar = () => {
               <button
                 onMouseEnter={() => setDestOpen(true)}
                 onMouseLeave={() => setDestOpen(false)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
+                className={`px-4 py-2 rounded-lg text-lg font-medium transition-colors flex items-center gap-1 ${
                   location.pathname.startsWith("/study-in")
                     ? "bg-primary/10 text-primary"
                     : "text-foreground/80 hover:text-primary hover:bg-primary/5"
@@ -92,7 +92,7 @@ const Navbar = () => {
                     <Link
                       key={d.path}
                       to={d.path}
-                      className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
+                      className={`block px-4 py-2.5 text-lg font-medium transition-colors ${
                         location.pathname === d.path
                           ? "text-primary bg-primary/5"
                           : "text-foreground/80 hover:text-primary hover:bg-primary/5"
@@ -131,7 +131,7 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-6 py-3 text-sm font-medium ${
+                className={`block px-6 py-3 text-lg font-medium ${
                   location.pathname === link.path
                     ? "text-primary bg-primary/5"
                     : "text-foreground/80"
@@ -147,7 +147,7 @@ const Navbar = () => {
                   key={d.path}
                   to={d.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-2 py-2.5 text-sm font-medium ${
+                  className={`block px-2 py-2.5 text-lg font-medium ${
                     location.pathname === d.path
                       ? "text-primary"
                       : "text-foreground/80"

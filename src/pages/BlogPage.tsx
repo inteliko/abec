@@ -153,7 +153,7 @@ const BlogPage = () => {
                 <button
                   key={cat}
                   onClick={() => handleCategoryChange(cat)}
-                  className={`px-4 py-2 text-sm rounded-full transition-colors border ${
+                  className={`px-4 py-2 text-lg rounded-full transition-colors border ${
                     selectedCategory === cat
                       ? "bg-primary text-primary-foreground border-primary"
                       : "bg-card text-foreground/80 border-border"
@@ -205,7 +205,7 @@ const BlogPage = () => {
                   <li key={p.id}>
                     <Link
                       to={`/blog/${p.id}`}
-                      className="text-sm text-primary hover:underline"
+                      className="text-lg text-primary hover:underline"
                     >
                       {p.title}
                     </Link>

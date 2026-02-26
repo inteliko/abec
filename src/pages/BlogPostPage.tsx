@@ -87,14 +87,14 @@ const BlogPostPage = () => {
       case "how-to-apply-australia":
         return (
           <>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               Applying to Australian universities involves choosing the right course and institution,
               checking entry requirements, and submitting transcripts, test scores, and personal
               statements. Many students overlook the importance of early preparation; start at least
               six months before deadlines and collect references early. Use the university portal to
               track your application and always double-check documents for accuracy.
             </p>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               ABEC counselors can review your forms and help you craft a strong statement of
               purpose that highlights your academic journey and future goals. We also explain fee
               structures, offer insights into scholarships, and assist with conditional offers when
@@ -105,13 +105,13 @@ const BlogPostPage = () => {
       case "canada-scholarships-2026":
         return (
           <>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               Canadian institutions offer a variety of scholarships ranging from entrance awards to
               research grants. To maximise your chances, target programs with smaller applicant
               pools and maintain a GPA of 3.5 or higher. It is essential to meet both university and
               external funding deadlines; missing one can disqualify you from multiple opportunities.
             </p>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               Craft a compelling application by emphasising leadership, volunteer experience, and
               how the funding will impact your career. ABEC provides personalized scholarship
               counselling and essay editing to help Bangladeshi students stand out.
@@ -121,12 +121,12 @@ const BlogPostPage = () => {
       case "living-in-uk-student":
         return (
           <>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               Moving to the UK can be exciting yet challenging. Expect to budget around £400–£600 per
               month for shared accommodation, plus additional costs for utilities and transport. Public
               transit is efficient, but students often invest in a railcard or Oyster card for savings.
             </p>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               Cultural adaptation takes time; attending university societies and events is a great way
               to meet people. Remember the UK has four countries with distinct cultures—England,
               Scotland, Wales and Northern Ireland—so experiences may vary depending on your campus.
@@ -136,13 +136,13 @@ const BlogPostPage = () => {
       case "usa-work-permit-guide":
         return (
           <>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               The Optional Practical Training (OPT) program allows F-1 students to work up to 12
               months after graduation. STEM graduates can apply for a 24‑month extension. Begin the
               OPT application while you are still enrolled and coordinate with your school’s
               international office to obtain an I‑20 endorsement.
             </p>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               After OPT, many students pursue H‑1B visas or employer-sponsored green cards. ABEC can
               connect you with US immigration consultants and provide guidance on timing and
               documentation.
@@ -152,13 +152,13 @@ const BlogPostPage = () => {
       case "malaysia-campus-tour":
         return (
           <>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               When touring Malaysian universities, look beyond facilities—check safety measures,
               student support services, and proximity to healthcare. Visit both commercial and on‑campus
               housing to compare costs and amenities. Talk to current students about meal plans and
               cultural adjustments.
             </p>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               Keep a checklist of questions and take photos of rooms so you can review them later.
               Our consultants can arrange guided tours and introduction sessions prior to your visit.
             </p>
@@ -167,19 +167,19 @@ const BlogPostPage = () => {
       case "scholarship-tips-international":
         return (
           <>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               Winning a scholarship often depends on the story you tell. Begin with a clear thesis: why
               you need the funds and how you will use them to contribute academically or socially.
               Use concrete examples of past achievements and end with a forward-looking statement.
             </p>
-            <p className="text-base leading-relaxed mb-4">
+            <p className="text-lg leading-relaxed mb-4">
               Proofread meticulously and, if possible, have a mentor review your essay. ABEC provides
               mock interviews and feedback sessions to refine your application package.
             </p>
           </>
         );
       default:
-        return <p className="text-base leading-relaxed mb-4">{post.excerpt}</p>;
+        return <p className="text-lg leading-relaxed mb-4">{post.excerpt}</p>;
     }
   };
 
@@ -189,7 +189,7 @@ const BlogPostPage = () => {
       <section className="py-20">
         <div className="container">
           <h1 className="font-heading text-3xl font-bold mb-4">{post.title}</h1>
-          <p className="text-sm text-muted-foreground mb-8">{post.date}</p>
+          <p className="text-lg text-muted-foreground mb-8">{post.date}</p>
           <img src={post.image} alt={post.title} className="w-full h-auto mb-8" />
           {renderContent()}
           <Link to="/blog" className="text-primary underline">

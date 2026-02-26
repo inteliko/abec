@@ -28,7 +28,7 @@ const StatsSection = () => {
               <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary">
                 {stat.value}
               </h3>
-              <p className="text-muted-foreground text-sm mt-1">{stat.label}</p>
+              <p className="text-muted-foreground text-lg mt-1">{stat.label}</p>
             </motion.div>
           ))}
         </div>

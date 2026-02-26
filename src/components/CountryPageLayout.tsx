@@ -74,7 +74,7 @@ const CountryPageLayout = ({
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+            <span className="text-primary font-semibold text-lg uppercase tracking-wider">
               Why Choose
             </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-3">
@@ -96,7 +96,7 @@ const CountryPageLayout = ({
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-heading font-semibold text-foreground mb-1">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.desc}</p>
+                <p className="text-muted-foreground text-lg">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -129,7 +129,7 @@ const CountryPageLayout = ({
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+            <span className="text-primary font-semibold text-lg uppercase tracking-wider">
               Partner Universities
             </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mt-3">
@@ -159,7 +159,7 @@ const CountryPageLayout = ({
                   transition={{ delay: i * 0.03 }}
                   className="bg-card rounded-xl border p-5 flex items-center justify-center min-h-[80px] hover:shadow-md transition-shadow"
                 >
-                  <p className="text-sm font-medium text-foreground text-center leading-tight">{name}</p>
+                  <p className="text-lg font-medium text-foreground text-center leading-tight">{name}</p>
                 </motion.div>
               ))}
             </div>
@@ -177,7 +177,7 @@ const CountryPageLayout = ({
             Book a free consultation with our expert counselors and take the first step towards your dream education.
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-primary hover:bg-brand-light text-primary-foreground font-semibold px-8 py-6 text-base">
+            <Button size="lg" className="bg-primary hover:bg-brand-light text-primary-foreground font-semibold px-8 py-6 text-lg">
               Book a FREE Consultation <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </Link>
@@ -230,24 +230,24 @@ const TabSection = ({ universities }: TabSectionProps) => {
         className="mt-8 bg-card rounded-xl border shadow-sm overflow-hidden"
       >
         <div className="hero-gradient p-4">
-          <h3 className="font-heading font-semibold text-primary-foreground text-sm">
+          <h3 className="font-heading font-semibold text-primary-foreground text-lg">
             {uni.name}
           </h3>
         </div>
         <div className="p-5 space-y-3">
-          <div className="flex items-center gap-2 text-sm">
+          <div className="flex items-center gap-2 text-lg">
             <DollarSign className="w-4 h-4 text-primary shrink-0" />
             <span className="text-muted-foreground">
               <strong className="text-foreground">Fees:</strong> {uni.fees}
             </span>
           </div>
-          <div className="flex items-center gap-2 text-sm">
+          <div className="flex items-center gap-2 text-lg">
             <Award className="w-4 h-4 text-primary shrink-0" />
             <span className="text-muted-foreground">
               <strong className="text-foreground">Scholarship:</strong> {uni.scholarship}
             </span>
           </div>
-          <div className="flex items-center gap-2 text-sm">
+          <div className="flex items-center gap-2 text-lg">
             <BookOpen className="w-4 h-4 text-primary shrink-0" />
             <span className="text-muted-foreground">
               <strong className="text-foreground">IELTS:</strong> {uni.ielts}
