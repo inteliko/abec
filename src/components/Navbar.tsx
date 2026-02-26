@@ -23,6 +23,7 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [destOpen, setDestOpen] = useState(false);
+  const [mobileDestOpen, setMobileDestOpen] = useState(false);
   const location = useLocation();
 
   return (
@@ -145,23 +146,41 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+
+            {/* Mobile destinations accordion */}
             <div className="px-6 py-2">
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Destinations</p>
-              {destinations.map((d) => (
-                <Link
-                  key={d.path}
-                  to={d.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-2 py-2.5 text-lg font-medium ${
-                    location.pathname === d.path
-                      ? "text-primary"
-                      : "text-foreground/80"
-                  }`}
-                >
-                  {d.label}
-                </Link>
-              ))}
+              <button
+                onClick={() => setMobileDestOpen((v) => !v)}
+                aria-expanded={mobileDestOpen}
+                className="w-full flex items-center justify-between px-2 py-2 text-left text-lg font-medium text-foreground/80"
+              >
+                <span className="font-semibold text-muted-foreground uppercase tracking-wider">Destinations</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileDestOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {mobileDestOpen && (
+                <div className="mt-2 pl-2">
+                  {destinations.map((d) => (
+                    <Link
+                      key={d.path}
+                      to={d.path}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setMobileDestOpen(false);
+                      }}
+                      className={`block px-2 py-2.5 text-lg font-medium ${
+                        location.pathname === d.path
+                          ? "text-primary"
+                          : "text-foreground/80"
+                      }`}
+                    >
+                      {d.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
+
             <div className="px-6 pt-2">
               <Link to="/contact" onClick={() => setIsOpen(false)}>
                 <Button className="w-full bg-primary hover:bg-brand-light text-primary-foreground font-semibold">

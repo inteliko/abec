@@ -42,7 +42,7 @@ const ServicesPage = () => {
 
       <section className="py-20">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-10">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -50,22 +50,22 @@ const ServicesPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="bg-white rounded-3xl p-12 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-out"
+                className="bg-white rounded-3xl p-8 md:p-12 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-out"
               >
-                <div className="flex items-start gap-6">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/60 backdrop-blur-sm">
-                    <service.icon className="w-8 h-8 text-gray-700" />
+                <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4 md:gap-6">
+                  <div className="mx-auto md:mx-0 mb-4 md:mb-0 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/60 backdrop-blur-sm flex-shrink-0">
+                    <service.icon className="w-6 h-6 md:w-8 md:h-8 text-gray-700" />
                   </div>
-                  <div className="flex-1 space-y-4">
-                    <h3 className="text-black font-semibold text-2xl leading-tight">
+                  <div className="flex-1 space-y-3">
+                    <h3 className="text-black font-semibold text-xl md:text-2xl leading-tight">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 text-base leading-relaxed">
+                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                       {service.description}
                     </p>
-                    <div className="grid grid-cols-2 gap-3 mt-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
                       {service.features.map((f) => (
-                        <span key={f} className="text-sm text-gray-600 flex items-center gap-2">
+                        <span key={f} className="text-sm text-gray-600 flex items-center gap-2 justify-start md:justify-start">
                           <span className="w-2 h-2 rounded-full bg-gray-400 shrink-0" />
                           {f}
                         </span>
