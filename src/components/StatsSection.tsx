@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { GraduationCap, Building2, Award, Globe } from "lucide-react";
 
 const stats = [
-  { icon: GraduationCap, value: "5,000+", label: "Students Assisted" },
-  { icon: Building2, value: "100+", label: "Partner Universities" },
+  { icon: GraduationCap, value: "10,000+", label: "Students Assisted" },
+  { icon: Building2, value: "200+", label: "Partner Universities" },
   { icon: Award, value: "95%", label: "Visa Success Rate" },
-  { icon: Globe, value: "5+", label: "Countries Covered" },
+  { icon: Globe, value: "20+", label: "Countries Covered" },
 ];
 
 const StatsSection = () => {

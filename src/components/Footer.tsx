@@ -15,10 +15,17 @@ const Footer = () => {
               their journey to top universities across Australia, UK, Canada, USA, Malaysia and many
             </p>
             <div className="flex gap-3">
-              {[Facebook, Instagram, Linkedin, Youtube].map((Icon, i) => (
+              {[
+                { Icon: Facebook, url: "https://www.facebook.com/abecinfo" },
+                { Icon: Instagram, url: "https://www.instagram.com/abecglobal/" },
+                { Icon: Linkedin, url: "#" },
+                { Icon: Youtube, url: "#" },
+              ].map(({ Icon, url }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition-colors"
                 >
                   <Icon className="w-4 h-4" />
@@ -107,7 +114,7 @@ const Footer = () => {
 
       <div className="border-t border-black/10">
         <div className="container py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-lg text-black/50">
-          <p>© 2025 ABEC. All rights reserved.</p>
+          <p>© 1999-2026 Australia Bangladesh Education Consultants. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-black transition-colors">Terms & Conditions</a>
