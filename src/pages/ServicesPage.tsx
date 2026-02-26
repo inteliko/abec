@@ -42,7 +42,7 @@ const ServicesPage = () => {
 
       <section className="py-20">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-10">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -50,23 +50,23 @@ const ServicesPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="bg-card rounded-xl p-8 border shadow-sm hover:shadow-lg transition-shadow"
+                className="bg-white rounded-3xl p-12 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-out"
               >
-                <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <service.icon className="w-7 h-7 text-primary" />
+                <div className="flex items-start gap-6">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/60 backdrop-blur-sm">
+                    <service.icon className="w-8 h-8 text-gray-700" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-heading font-semibold text-xl text-foreground mb-2">
+                  <div className="flex-1 space-y-4">
+                    <h3 className="text-black font-semibold text-2xl leading-tight">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                    <p className="text-gray-600 text-base leading-relaxed">
                       {service.description}
                     </p>
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-2 gap-3 mt-4">
                       {service.features.map((f) => (
-                        <span key={f} className="text-xs text-muted-foreground flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                        <span key={f} className="text-sm text-gray-600 flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-gray-400 shrink-0" />
                           {f}
                         </span>
                       ))}
