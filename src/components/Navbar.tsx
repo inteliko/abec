@@ -35,13 +35,18 @@ const Navbar = () => {
               <Phone className="w-3.5 h-3.5" />
               +8801730028095 
             </span>
+
+             <span className="flex items-center gap-1.5">
+              <Phone className="w-3.5 h-3.5" />
+              +8801730028096 
+            </span>
             <span className="flex items-center gap-1.5">
               <Mail className="w-3.5 h-3.5" />
               info@abecedu.net
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <span>Uttara, Dhaka | Kawran Bazar, Dhaka</span>
+            <span>Kawran Bazar/Uttara, Dhaka</span>
           </div>
         </div>
       </div>
