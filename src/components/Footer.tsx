@@ -80,7 +80,16 @@ const Footer = () => {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 mt-0.5 text-black shrink-0" />
                 <span className="text-black/70">
-                   57 Kazi Nazrul Islam Ave, Dhaka 1215
+                   Head Office:
+                  57 Kazi Nazrul Islam Ave, Dhaka 1215
+                </span>
+              </li>
+
+               <li className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 mt-0.5 text-black shrink-0" />
+                <span className="text-black/70">
+                   Uttara Office:
+                    House-02, Road-2/A, Sonargaon Janapath Rd, Dhaka
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
