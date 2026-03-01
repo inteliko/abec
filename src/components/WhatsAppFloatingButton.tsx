@@ -10,14 +10,15 @@ const WhatsAppFloatingButton: React.FC = () => {
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
       className="fixed bottom-4 right-4 z-50 w-12 h-12 sm:w-14 sm:h-14
-        bg-[#25D366] rounded-full flex items-center justify-center
-        shadow-md hover:shadow-lg transition-shadow duration-200
+        bg-white rounded-full flex items-center justify-center
+        shadow-md hover:shadow-lg transition-transform duration-150
+        hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#25D366]/30
       "
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
-        className="w-6 h-6 text-white"
+        className="w-6 h-6 text-[#25D366]"
         fill="currentColor"
       >
         <path d="M380.9 97.1C339 55.2 285.6 32 229.4 32 103
