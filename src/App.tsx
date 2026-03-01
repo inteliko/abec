@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 
 // floating WhatsApp button
 import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
       <Sonner />
       <WhatsAppFloatingButton />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutPage />} />
