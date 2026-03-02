@@ -14,48 +14,50 @@ const universities = [
 ];
 
 const partnerUniversities = [
+
+  { name: "Mourdoch University", logo: "/src/assets/australia/murdoch.jpeg", url: "https://www.murdoch.edu.au/" },
+  { name: "CQUniversity", logo: "/src/assets/australia/cq.jpeg",  url: "https://www.cqu.edu.au/" },
+  { name: "Edith Cowan University", logo: "/src/assets/australia/ecu.jpeg", url: "https://www.ecu.edu.au/" },
+  { name: "Deakin University", logo: "/src/assets/australia/deakin.jpeg",  url: "https://www.deakin.edu.au/" },
   {
     name: "Macquarie University",
-    logo: "https://via.placeholder.com/150?text=Macquarie",
+    logo: "/src/assets/australia/macuni.jpeg",
     url: "https://www.mq.edu.au/",
   },
   {
     name: "Adelaide University",
-    logo: "https://via.placeholder.com/150?text=Adelaide",
+    logo: "/src/assets/australia/adelaide.jpeg", 
     url: "https://www.adelaide.edu.au/",
   },
   {
     name: "Monash University",
-    logo: "https://via.placeholder.com/150?text=Monash",
+    logo: "/src/assets/australia/monash.jpeg",
     url: "https://www.monash.edu/",
   },
   // remaining institutions without logos will still display their name
-  { name: "UTS", url: "https://www.uts.edu.au/" },
-  { name: "University of Tasmania", url: "https://www.utas.edu.au/" },
-  { name: "University of Wollongong", url: "https://www.uow.edu.au/" },
-  { name: "La Trobe University", url: "https://www.latrobe.edu.au/" },
-  { name: "Charles Darwin University", url: "https://www.cdu.edu.au/" },
-  { name: "Victoria University", url: "https://www.vu.edu.au/" },
-  { name: "University of Canberra", url: "https://www.canberra.edu.au/" },
-  { name: "Swinburne University", url: "https://www.swinburne.edu.au/" },
-  { name: "Edith Cowan University", url: "https://www.ecu.edu.au/" },
-  { name: "Flinders University", url: "https://www.flinders.edu.au/" },
-  { name: "Federation University", url: "https://federation.edu.au/" },
-  { name: "Western Sydney University", url: "https://www.westernsydney.edu.au/" },
-  { name: "RMIT University", url: "https://www.rmit.edu.au/" },
-  { name: "SAIBT", url: "https://www.saibt.sa.edu.au/" },
-  { name: "Melbourne Institute of Technology", url: "https://www.mit.edu.au/" },
-  { name: "James Cook University", url: "https://www.jcu.edu.au/" },
-  { name: "Griffith University", url: "https://www.griffith.edu.au/" },
-  { name: "CQUniversity", url: "https://www.cqu.edu.au/" },
-  { name: "Curtin University", url: "https://www.curtin.edu.au/" },
-  { name: "Deakin University", url: "https://www.deakin.edu.au/" },
-  { name: "Bond University", url: "https://bond.edu.au/" },
-  { name: "University of Western Australia", url: "https://www.uwa.edu.au/" },
-  { name: "QUT", url: "https://www.qut.edu.au/" },
-  { name: "University of New England", url: "https://www.une.edu.au/" },
-  { name: "University of Newcastle", url: "https://www.newcastle.edu.au/" },
-  { name: "University of Southern Queensland", url: "https://www.usq.edu.au/" },
+
+
+
+  { name: "UTS", logo: "/src/assets/australia/uts.jpeg", url: "https://www.uts.edu.au/" },
+  { name: "University of Tasmania", logo: "/src/assets/australia/uoft.jpeg", url: "https://www.utas.edu.au/" },
+  { name: "University of Wollongong", logo: "/src/assets/australia/uow.jpeg", url: "https://www.uow.edu.au/" },
+  { name: "La Trobe University", logo: "/src/assets/australia/ltu.jpeg", url: "https://www.latrobe.edu.au/" },
+  { name: "Charles Darwin University", logo: "/src/assets/australia/cwua.jpeg", url: "https://www.cdu.edu.au/" },
+  { name: "Victoria University", logo: "/src/assets/australia/vu.jpeg", url: "https://www.vu.edu.au/" },
+  { name: "James Cook University", logo: "/src/assets/australia/jcu.jpeg", url: "https://www.jcu.edu.au/" },
+
+  { name: "University of Sunshine Coast", logo: "/src/assets/australia/usca.jpeg", url: "https://www.usc.edu.au/" },
+  { name: "Charles Stuart University", logo: "/src/assets/australia/csu.jpeg", url: "https://federation.edu.au/" },
+  { name: "Western Sydney University", logo: "/src/assets/australia/wyu.jpeg", url: "https://www.westernsydney.edu.au/" },
+  { name: "The University of Notre Dame Australia", logo: "/src/assets/australia/unda.jpeg",  url: "https://www.nd.edu.au/" },
+  { name: "James Cook University", logo: "/src/assets/australia/jcua.jpeg",  url: "https://www.jcu.edu.au/" },
+  { name: "Charles Darwin University (CDU)", logo: "/src/assets/australia/cdua.jpeg",  url: "https://www.cdu.edu.au/" },
+
+  { name: "Curtin University", logo: "/src/assets/australia/cu.jpeg",  url: "https://www.curtin.edu.au/" },
+
+  { name: "University of Western Australia", logo: "/src/assets/australia/uowa.jpeg",  url: "https://www.uwa.edu.au/" },
+  { name: "University of Queensland", logo: "/src/assets/australia/uoqa.jpeg",  url: "https://www.uq.edu.au/" },
+  { name: "Swinburne University of Technology", logo: "/src/assets/australia/swu.jpeg",  url: "https://www.swinburne.edu.au/" },
 ];
 
 const StudyAustraliaPage = () => {
