@@ -14,26 +14,15 @@ const universities = [
 ];
 
 const partnerUniversities = [
-  { name: "University of East London", url: "https://www.uel.ac.uk" },
-  { name: "Middlesex University", url: "https://www.mdx.ac.uk" },
-  { name: "University of Greenwich", url: "https://www.gre.ac.uk" },
-  { name: "University of Hertfordshire", url: "https://www.herts.ac.uk" },
-  { name: "Coventry University", url: "https://www.coventry.ac.uk" },
-  { name: "University of Sunderland", url: "https://www.sunderland.ac.uk" },
-  { name: "Anglia Ruskin University", url: "https://aru.ac.uk" },
-  { name: "University of Bedfordshire", url: "https://www.beds.ac.uk" },
-  { name: "University of Central Lancashire", url: "https://www.uclan.ac.uk" },
-  { name: "Birmingham City University", url: "https://www.bcu.ac.uk" },
-  { name: "University of West London", url: "https://www.uwl.ac.uk" },
-  { name: "De Montfort University", url: "https://www.dmu.ac.uk" },
-  { name: "University of Roehampton", url: "https://www.roehampton.ac.uk" },
-  { name: "London South Bank University", url: "https://www.lsbu.ac.uk" },
-  { name: "University of Northampton", url: "https://www.northampton.ac.uk" },
-  { name: "Canterbury Christ Church University", url: "https://www.canterbury.ac.uk" },
-  { name: "University of South Wales", url: "https://www.southwales.ac.uk" },
-  { name: "Teesside University", url: "https://www.tees.ac.uk" },
-  { name: "University of Bolton", url: "https://www.bolton.ac.uk" },
-  { name: "BPP University", url: "https://www.bpp.com" },
+  { name: "Birmingham City University International College", logo: "/src/assets/uk/bcuit.jpeg", url: "https://www.bcu.ac.uk/international-college" },
+  { name: "Hertfordshire International College", logo: "/src/assets/uk/hic.jpeg", url: "https://www.herts.ac.uk/international-college" },
+  { name: "International College at Robert Gordon University", logo: "/src/assets/uk/rgu.jpeg", url: "https://www.rgu.ac.uk/international-college" },
+  { name: "International College Portsmouth", logo: "/src/assets/uk/uop.jpeg", url: "https://www.port.ac.uk/international-college" },
+  { name: "Brunel University London Pathway College", logo: "/src/assets/uk/bul.jpeg", url: "https://www.brunel.ac.uk/international-college" },
+  { name: "The College, Swansea University", logo: "/src/assets/uk/supa.jpeg", url: "https://www.swansea.ac.uk/international-college" },
+  { name: "University of Plymouth International College", logo: "/src/assets/uk/uoply.jpeg", url: "https://www.plymouth.ac.uk/international-college" },
+  { name: "Keele University International College", logo: "/src/assets/uk/ku.jpeg", url: "https://www.keele.ac.uk/international-college" },
+
 ];
 
 const StudyUKPage = () => {
