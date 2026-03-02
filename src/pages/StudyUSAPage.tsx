@@ -13,11 +13,23 @@ const universities = [
   { name: "Lewis University", fees: "USD 17,000 – 22,000/year", scholarship: "Up to 35%", ielts: "6.5 Overall", programs: ["Aviation", "Business", "Computer Science", "Engineering", "Nursing"], locations: ["Illinois"] },
 ];
 
-const partnerNames = [
-  "University of Bridgeport", "University of New Haven", "Wright State University", "Southeast Missouri State University",
-  "University of the Cumberlands", "Lewis University", "Trine University", "University of Dayton",
-  "Northern Illinois University", "Youngstown State University", "University of South Florida", "Florida International University",
-  "Kent State University", "University of Findlay", "New England College", "Wichita State University",
+const partnerUniversities = [
+  { name: "University of Bridgeport", url: "https://www.bridgeport.edu" },
+  { name: "University of New Haven", url: "https://www.newhaven.edu" },
+  { name: "Wright State University", url: "https://www.wright.edu" },
+  { name: "Southeast Missouri State University", url: "https://semo.edu" },
+  { name: "University of the Cumberlands", url: "https://www.ucumberlands.edu" },
+  { name: "Lewis University", url: "https://www.lewisu.edu" },
+  { name: "Trine University", url: "https://www.trine.edu" },
+  { name: "University of Dayton", url: "https://udayton.edu" },
+  { name: "Northern Illinois University", url: "https://www.niu.edu" },
+  { name: "Youngstown State University", url: "https://ysu.edu" },
+  { name: "University of South Florida", url: "https://www.usf.edu" },
+  { name: "Florida International University", url: "https://www.fiu.edu" },
+  { name: "Kent State University", url: "https://www.kent.edu" },
+  { name: "University of Findlay", url: "https://www.findlay.edu" },
+  { name: "New England College", url: "https://www.nec.edu" },
+  { name: "Wichita State University", url: "https://www.wichita.edu" },
 ];
 
 const StudyUSAPage = () => {
@@ -36,7 +48,7 @@ const StudyUSAPage = () => {
         ]}
         intakes={["Fall (August)", "Spring (January)", "Summer (May)"]}
         universities={universities}
-        partnerNames={partnerNames}
+        partnerUniversities={partnerUniversities}
       />
       <Footer />
     </div>

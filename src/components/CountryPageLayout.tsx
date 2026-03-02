@@ -19,6 +19,12 @@ interface WhyItem {
   desc: string;
 }
 
+interface PartnerUniversity {
+  name: string;
+  logo?: string;      // optional logo image URL or import
+  url?: string;       // optional website link
+}
+
 interface CountryPageLayoutProps {
   country: string;
   heroImage: string;
@@ -26,7 +32,7 @@ interface CountryPageLayoutProps {
   whyItems: WhyItem[];
   intakes: string[];
   universities: University[];
-  partnerNames: string[];
+  partnerUniversities: PartnerUniversity[]; // replaced partnerNames
 }
 
 const CountryPageLayout = ({
@@ -36,7 +42,7 @@ const CountryPageLayout = ({
   whyItems,
   intakes,
   universities,
-  partnerNames,
+  partnerUniversities,
 }: CountryPageLayoutProps) => {
   return (
     <>
@@ -143,23 +149,52 @@ const CountryPageLayout = ({
       </section>
 
       {/* University Partners Grid - like reference */}
-      {partnerNames.length > 0 && (
+      {partnerUniversities.length > 0 && (
         <section className="py-16 bg-secondary/50">
           <div className="container">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
               Our {country} University Partners
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-              {partnerNames.map((name, i) => (
+              {partnerUniversities.map((uni, i) => (
                 <motion.div
-                  key={name}
+                  key={uni.name + i}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.03 }}
                   className="bg-card rounded-xl border p-5 flex items-center justify-center min-h-[80px] hover:shadow-md transition-shadow"
                 >
-                  <p className="text-lg font-medium text-foreground text-center leading-tight">{name}</p>
+                  {uni.url ? (
+                    <a
+                      href={uni.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full h-full"
+                    >
+                      {uni.logo ? (
+                        <img
+                          src={uni.logo}
+                          alt={uni.name}
+                          className="max-h-16 object-contain"
+                        />
+                      ) : (
+                        <span className="text-lg font-medium text-foreground text-center leading-tight">
+                          {uni.name}
+                        </span>
+                      )}
+                    </a>
+                  ) : uni.logo ? (
+                    <img
+                      src={uni.logo}
+                      alt={uni.name}
+                      className="max-h-16 object-contain"
+                    />
+                  ) : (
+                    <span className="text-lg font-medium text-foreground text-center leading-tight">
+                      {uni.name}
+                    </span>
+                  )}
                 </motion.div>
               ))}
             </div>

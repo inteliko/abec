@@ -13,12 +13,23 @@ const universities = [
   { name: "Management & Science University (MSU)", fees: "MYR 12,000 – 20,000/year", scholarship: "Up to 25%", ielts: "5.5 Overall", programs: ["Business", "Engineering", "IT", "Health Sciences", "Education"], locations: ["Shah Alam"] },
 ];
 
-const partnerNames = [
-  "Asia Pacific University (APU)", "Taylor's University", "UCSI University", "Sunway University",
-  "Universiti Teknologi Malaysia", "Management & Science University", "Multimedia University",
-  "INTI International University", "SEGi University", "HELP University",
-  "University of Nottingham Malaysia", "Monash University Malaysia", "Heriot-Watt University Malaysia",
-  "Limkokwing University", "Taylors College", "MAHSA University",
+const partnerUniversities = [
+  { name: "Asia Pacific University (APU)", url: "https://www.apu.edu.my" },
+  { name: "Taylor's University", url: "https://www.taylors.edu.my" },
+  { name: "UCSI University", url: "https://www.ucsiuniversity.edu.my" },
+  { name: "Sunway University", url: "https://www.sunway.edu.my" },
+  { name: "Universiti Teknologi Malaysia", url: "https://www.utm.my" },
+  { name: "Management & Science University", url: "https://www.msu.edu.my" },
+  { name: "Multimedia University", url: "https://www.mmu.edu.my" },
+  { name: "INTI International University", url: "https://newinti.edu.my" },
+  { name: "SEGi University", url: "https://www.segi.edu.my" },
+  { name: "HELP University", url: "https://www.help.edu.my" },
+  { name: "University of Nottingham Malaysia", url: "https://www.nottingham.edu.my" },
+  { name: "Monash University Malaysia", url: "https://www.monash.edu.my" },
+  { name: "Heriot-Watt University Malaysia", url: "https://www.hw.ac.uk/malaysia" },
+  { name: "Limkokwing University", url: "https://www.limkokwing.net" },
+  { name: "Taylors College", url: "https://www.taylorscollege.edu.my" },
+  { name: "MAHSA University", url: "https://www.mahsa.edu.my" },
 ];
 
 const StudyMalaysiaPage = () => {
@@ -38,7 +49,7 @@ const StudyMalaysiaPage = () => {
         ]}
         intakes={["March", "July", "October"]}
         universities={universities}
-        partnerNames={partnerNames}
+        partnerUniversities={partnerUniversities}
       />
       <Footer />
       </div>

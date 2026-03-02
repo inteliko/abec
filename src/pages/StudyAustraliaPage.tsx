@@ -13,13 +13,49 @@ const universities = [
   { name: "Edith Cowan University", fees: "AUD 13,000 – 16,000/semester", scholarship: "Up to 20%", ielts: "6.0 Overall", programs: ["Engineering", "IT", "Nursing", "Business", "Arts", "Science", "Education"], locations: ["Perth"] },
 ];
 
-const partnerNames = [
-  "Macquarie University", "Adelaide University", "Monash University", "UTS", "University of Tasmania",
-  "University of Wollongong", "La Trobe University", "Charles Darwin University", "Victoria University", "University of Canberra",
-  "Swinburne University", "Edith Cowan University", "Flinders University", "Federation University", "Western Sydney University",
-  "RMIT University", "SAIBT", "Melbourne Institute of Technology", "James Cook University", "Griffith University",
-  "CQUniversity", "Curtin University", "Deakin University", "Bond University", "University of Western Australia",
-  "QUT", "University of New England", "University of Newcastle", "University of Southern Queensland",
+const partnerUniversities = [
+  {
+    name: "Macquarie University",
+    logo: "https://via.placeholder.com/150?text=Macquarie",
+    url: "https://www.mq.edu.au/",
+  },
+  {
+    name: "Adelaide University",
+    logo: "https://via.placeholder.com/150?text=Adelaide",
+    url: "https://www.adelaide.edu.au/",
+  },
+  {
+    name: "Monash University",
+    logo: "https://via.placeholder.com/150?text=Monash",
+    url: "https://www.monash.edu/",
+  },
+  // remaining institutions without logos will still display their name
+  { name: "UTS", url: "https://www.uts.edu.au/" },
+  { name: "University of Tasmania", url: "https://www.utas.edu.au/" },
+  { name: "University of Wollongong", url: "https://www.uow.edu.au/" },
+  { name: "La Trobe University", url: "https://www.latrobe.edu.au/" },
+  { name: "Charles Darwin University", url: "https://www.cdu.edu.au/" },
+  { name: "Victoria University", url: "https://www.vu.edu.au/" },
+  { name: "University of Canberra", url: "https://www.canberra.edu.au/" },
+  { name: "Swinburne University", url: "https://www.swinburne.edu.au/" },
+  { name: "Edith Cowan University", url: "https://www.ecu.edu.au/" },
+  { name: "Flinders University", url: "https://www.flinders.edu.au/" },
+  { name: "Federation University", url: "https://federation.edu.au/" },
+  { name: "Western Sydney University", url: "https://www.westernsydney.edu.au/" },
+  { name: "RMIT University", url: "https://www.rmit.edu.au/" },
+  { name: "SAIBT", url: "https://www.saibt.sa.edu.au/" },
+  { name: "Melbourne Institute of Technology", url: "https://www.mit.edu.au/" },
+  { name: "James Cook University", url: "https://www.jcu.edu.au/" },
+  { name: "Griffith University", url: "https://www.griffith.edu.au/" },
+  { name: "CQUniversity", url: "https://www.cqu.edu.au/" },
+  { name: "Curtin University", url: "https://www.curtin.edu.au/" },
+  { name: "Deakin University", url: "https://www.deakin.edu.au/" },
+  { name: "Bond University", url: "https://bond.edu.au/" },
+  { name: "University of Western Australia", url: "https://www.uwa.edu.au/" },
+  { name: "QUT", url: "https://www.qut.edu.au/" },
+  { name: "University of New England", url: "https://www.une.edu.au/" },
+  { name: "University of Newcastle", url: "https://www.newcastle.edu.au/" },
+  { name: "University of Southern Queensland", url: "https://www.usq.edu.au/" },
 ];
 
 const StudyAustraliaPage = () => {
@@ -38,7 +74,7 @@ const StudyAustraliaPage = () => {
         ]}
         intakes={["February", "July", "November"]}
         universities={universities}
-        partnerNames={partnerNames}
+        partnerUniversities={partnerUniversities}
       />
       <Footer />
     </div>

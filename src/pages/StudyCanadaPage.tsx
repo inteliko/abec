@@ -37,7 +37,7 @@ const StudyCanadaPage = () => {
         ]}
         intakes={["September", "January", "May"]}
         universities={universities}
-        partnerNames={partnerNames}
+        partnerUniversities={partnerUniversities}
       />
       <Footer />
     </div>

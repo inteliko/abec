@@ -13,12 +13,27 @@ const universities = [
   { name: "University of Sunderland", fees: "£12,000 – £14,000/year", scholarship: "Up to 20%", ielts: "6.0 Overall", programs: ["Business", "Computing", "Engineering", "Nursing", "Tourism"], locations: ["Sunderland", "London"] },
 ];
 
-const partnerNames = [
-  "University of East London", "Middlesex University", "University of Greenwich", "University of Hertfordshire",
-  "Coventry University", "University of Sunderland", "Anglia Ruskin University", "University of Bedfordshire",
-  "University of Central Lancashire", "Birmingham City University", "University of West London", "De Montfort University",
-  "University of Roehampton", "London South Bank University", "University of Northampton", "Canterbury Christ Church University",
-  "University of South Wales", "Teesside University", "University of Bolton", "BPP University",
+const partnerUniversities = [
+  { name: "University of East London", url: "https://www.uel.ac.uk" },
+  { name: "Middlesex University", url: "https://www.mdx.ac.uk" },
+  { name: "University of Greenwich", url: "https://www.gre.ac.uk" },
+  { name: "University of Hertfordshire", url: "https://www.herts.ac.uk" },
+  { name: "Coventry University", url: "https://www.coventry.ac.uk" },
+  { name: "University of Sunderland", url: "https://www.sunderland.ac.uk" },
+  { name: "Anglia Ruskin University", url: "https://aru.ac.uk" },
+  { name: "University of Bedfordshire", url: "https://www.beds.ac.uk" },
+  { name: "University of Central Lancashire", url: "https://www.uclan.ac.uk" },
+  { name: "Birmingham City University", url: "https://www.bcu.ac.uk" },
+  { name: "University of West London", url: "https://www.uwl.ac.uk" },
+  { name: "De Montfort University", url: "https://www.dmu.ac.uk" },
+  { name: "University of Roehampton", url: "https://www.roehampton.ac.uk" },
+  { name: "London South Bank University", url: "https://www.lsbu.ac.uk" },
+  { name: "University of Northampton", url: "https://www.northampton.ac.uk" },
+  { name: "Canterbury Christ Church University", url: "https://www.canterbury.ac.uk" },
+  { name: "University of South Wales", url: "https://www.southwales.ac.uk" },
+  { name: "Teesside University", url: "https://www.tees.ac.uk" },
+  { name: "University of Bolton", url: "https://www.bolton.ac.uk" },
+  { name: "BPP University", url: "https://www.bpp.com" },
 ];
 
 const StudyUKPage = () => {
@@ -37,7 +52,7 @@ const StudyUKPage = () => {
         ]}
         intakes={["September", "January", "May"]}
         universities={universities}
-        partnerNames={partnerNames}
+        partnerUniversities={partnerUniversities}
       />
       <Footer />
     </div>
