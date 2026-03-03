@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import australiaImg from "@/assets/australia.jpg";
 import ukImg from "@/assets/uk.jpg";
 import canadaImg from "@/assets/canada.jpg";
-import usaImg from "@/assets/usa.jpg";
-import malaysiaImg from "@/assets/malaysia.jpg";
+import newzealandImg from "@/assets/usa.jpg"; // placeholder image used until NZ asset available
+import asiaImg from "@/assets/malaysia.jpg"; // placeholder for Asia
 
 const destinations = [
   {
@@ -27,16 +27,16 @@ const destinations = [
     link: "/study-in-canada",
   },
   {
-    name: "USA",
-    image: usaImg,
-    description: "Home to the world's top-ranked universities",
-    link: "/study-in-usa",
+    name: "New Zealand",
+    image: newzealandImg, // temporary placeholder until a NZ image is added
+    description: "Beautiful landscapes and world-class education",
+    link: "/study-in-new-zealand",
   },
   {
-    name: "Malaysia",
-    image: malaysiaImg,
-    description: "Quality education at affordable costs in Asia",
-    link: "/study-in-malaysia",
+    name: "Asia",
+    image: asiaImg,
+    description: "Best of Asia: Dubai, Singapore, and Malaysia opportunities",
+    link: "/study-in-asia",
   },
 ];
 

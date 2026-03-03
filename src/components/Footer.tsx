@@ -65,8 +65,8 @@ const Footer = () => {
                 { label: "Australia", path: "/study-in-australia" },
                 { label: "United Kingdom", path: "/study-in-uk" },
                 { label: "Canada", path: "/study-in-canada" },
-                { label: "United States", path: "/study-in-usa" },
-                { label: "Malaysia", path: "/study-in-malaysia" },
+                { label: "New Zealand", path: "/study-in-new-zealand" },
+                { label: "Asia", path: "/study-in-asia" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link

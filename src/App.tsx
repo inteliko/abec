@@ -9,8 +9,9 @@ import ServicesPage from "./pages/ServicesPage";
 import StudyAustraliaPage from "./pages/StudyAustraliaPage";
 import StudyUKPage from "./pages/StudyUKPage";
 import StudyCanadaPage from "./pages/StudyCanadaPage";
-import StudyUSAPage from "./pages/StudyUSAPage";
-import StudyMalaysiaPage from "./pages/StudyMalaysiaPage";
+// import StudyUSAPage from "./pages/StudyUSAPage"; // removed, replaced by New Zealand
+import StudyNewZealandPage from "./pages/StudyNewZealandPage";
+import StudyAsiaPage from "./pages/StudyMalaysiaPage"; // file still named Malaysia but exports StudyAsiaPage
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
@@ -39,8 +40,8 @@ const App = () => (
           <Route path="/study-in-australia" element={<StudyAustraliaPage />} />
           <Route path="/study-in-uk" element={<StudyUKPage />} />
           <Route path="/study-in-canada" element={<StudyCanadaPage />} />
-          <Route path="/study-in-usa" element={<StudyUSAPage />} />
-          <Route path="/study-in-malaysia" element={<StudyMalaysiaPage />} />
+          <Route path="/study-in-new-zealand" element={<StudyNewZealandPage />} />
+          <Route path="/study-in-asia" element={<StudyAsiaPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

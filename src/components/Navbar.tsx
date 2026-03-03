@@ -8,8 +8,8 @@ const destinations = [
   { label: "Study in Australia", path: "/study-in-australia" },
   { label: "Study in UK", path: "/study-in-uk" },
   { label: "Study in Canada", path: "/study-in-canada" },
-  { label: "Study in USA", path: "/study-in-usa" },
-  { label: "Study in Malaysia", path: "/study-in-malaysia" },
+  { label: "Study in New Zealand", path: "/study-in-new-zealand" },
+  { label: "Study in Asia", path: "/study-in-asia" },
 ];
 
 const navLinks = [

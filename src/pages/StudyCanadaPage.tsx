@@ -13,12 +13,30 @@ const universities = [
   { name: "Cape Breton University", fees: "CAD 10,000 – 13,000/year", scholarship: "Up to 25%", ielts: "6.5 Overall", programs: ["Business", "Engineering", "IT", "Health", "Arts", "Science"], locations: ["Sydney, NS"] },
 ];
 
-const partnerNames = [
-  "University of Manitoba", "Thompson Rivers University", "Conestoga College", "Seneca College",
-  "Centennial College", "Cape Breton University", "University of Regina", "Lakehead University",
-  "Nipissing University", "Vancouver Island University", "Algoma University", "Cambrian College",
-  "Fanshawe College", "George Brown College", "Humber College", "Niagara College",
-  "Sheridan College", "Lambton College", "St. Clair College", "Canadore College",
+// partners list combining pathway and direct universities
+const partnerUniversities = [
+  { name: "Fraser International College",  url: "https://www.fraseric.ca/", logo: "/src/assets/canada/sfu.jpeg" },
+  { name: "International College of Manitoba", url: "https://www.icmanitoba.ca/", logo: "/src/assets/canada/ufm.jpeg" },
+  { name: "Ryerson University International College", url: "https://www.ryersonuic.ca/", logo: "/src/assets/canada/ruic.jpeg", },
+  { name: "Wilfrid Laurier International College", url: "https://www.torontomuic.ca/", logo: "/src/assets/canada/wlic.jpeg", },
+  { name: "Western International College", url: "https://www.westernic.ca/", logo: "/src/assets/canada/wca.jpeg",  },
+  { name: "Toronto Metropolitan University International College", url: "https://www.torontomuic.ca/", logo: "/src/assets/canada/tmu.jpeg",  },
+  { name: "ULethbridge International College", url: "https://www.uicc.ca/", logo: "/src/assets/canada/ultb.jpeg", },
+  { name: "University of Windsor", url: "https://www.uwindsor.ca", logo: "/src/assets/canada/uows.jpeg", },
+  { name: "Concordia University of Edmonton", url: "https://www.concordia.ab.ca", logo: "/src/assets/canada/cuoe.jpeg",  },
+  { name: "Thompson Rivers University", url: "https://www.tru.ca", logo: "/src/assets/canada/tru.jpeg", },
+  { name: "Simon Fraser University", url: "https://www.sfu.ca", logo: "/src/assets/canada/sfu.jpeg",  },
+  { name: "Western University", url: "https://www.uwo.ca", logo: "/src/assets/canada/wca.jpeg",  },
+  { name: "St Thomas University", url: "https://www.stu.ca", logo: "/src/assets/canada/sttu.jpeg",  },
+  { name: "Cape Breton University", url: "https://www.cbu.ca", logo: "/src/assets/canada/cbu.jpeg", },
+  { name: "Algoma University", url: "https://www.algomau.ca", logo: "/src/assets/canada/au.jpeg",  },
+  { name: "University of Ottawa", url: "https://www.uottawa.ca", logo: "/src/assets/canada/owttwa.jpeg", },
+  { name: "University of Regina", url: "https://www.uregina.ca", logo: "/src/assets/canada/uor.jpeg",  },
+  { name: "University of Canada West", url: "https://www.ucanwest.ca", logo: "/src/assets/canada/western.jpeg", },
+  { name: "Trent University", url: "https://www.trentu.ca", logo: "/src/assets/canada/tu.jpeg", },
+  { name: "Trinity Western University", url: "https://www.twu.ca", logo: "/src/assets/canada/twu.jpeg", },
+  { name: "University of Fraser Valley", url: "https://www.ufv.ca", logo: "/src/assets/canada/uof.jpeg",  },
+  { name: "Acadia University", url: "https://www.acadiau.ca", logo: "/src/assets/canada/auuu.jpeg",  },
 ];
 
 const StudyCanadaPage = () => {
