@@ -14,28 +14,21 @@ const universities = [
 ];
 
 const partnerUniversities = [
-  { name: "NZMA - ACG Group/UP Education", url: "https://www.nzma.edu.au", logo: "https://via.placeholder.com/120x60?text=NZMA" },
-  { name: "Yoobee - ACG Group/UP Education", url: "https://yoobee.ac.nz", logo: "https://via.placeholder.com/120x60?text=Yoobee" },
-  { name: "Southseas Film & Television", url: "https://www.southseas.ac.nz", logo: "https://via.placeholder.com/120x60?text=Southseas" },
-  { name: "NZIS - New Zealand Institute of Sport", url: "https://www.nzis.ac.nz", logo: "https://via.placeholder.com/120x60?text=NZIS" },
-  { name: "IPU New Zealand Tertiary Institute", url: "https://www.ipu.ac.nz", logo: "https://via.placeholder.com/120x60?text=IPU" },
-  { name: "New Zealand School of Tourism", url: "https://www.nzst.ac.nz", logo: "https://via.placeholder.com/120x60?text=NZST" },
-  { name: "Aspire2International", url: "https://www.aspire2.ac.nz", logo: "https://via.placeholder.com/120x60?text=Aspire2" },
-  { name: "Universal College of Learning (UCOL)", url: "https://www.ucol.ac.nz", logo: "https://via.placeholder.com/120x60?text=UCOL" },
-  { name: "AIS St Helen", url: "https://www.aisthelens.ac.nz", logo: "https://via.placeholder.com/120x60?text=AIS" },
-  { name: "NSIA - ACG Group/UP Education", url: "https://www.nsia.ac.nz", logo: "https://via.placeholder.com/120x60?text=NSIA" },
-  { name: "Cornell Institute of Business Technology", url: "https://www.cornell.ac.nz", logo: "https://via.placeholder.com/120x60?text=Cornell" },
-  { name: "Regent International Edu Group", url: "https://www.regent.ac.nz", logo: "https://via.placeholder.com/120x60?text=Regent" },
-  { name: "NTec", url: "https://www.ntec.ac.nz", logo: "https://via.placeholder.com/120x60?text=NTec" },
-  { name: "ATMC New Zealand", url: "https://www.atmc.ac.nz", logo: "https://via.placeholder.com/120x60?text=ATMC" },
-  { name: "Animation College - ACG", url: "https://www.animationcollege.ac.nz", logo: "https://via.placeholder.com/120x60?text=Animation" },
-  { name: "UUNZ Institute of Business", url: "https://www.uunz.ac.nz", logo: "https://via.placeholder.com/120x60?text=UUNZ" },
-  { name: "Whitecliffe College of Arts & Design", url: "https://www.whitecliffe.ac.nz", logo: "https://via.placeholder.com/120x60?text=Whitecliffe" },
-  { name: "Queenstown Resort College - QRC", url: "https://www.qrc.ac.nz", logo: "https://via.placeholder.com/120x60?text=QRC" },
-  { name: "NZSE (New Zealand School of Education)", url: "https://www.nzse.ac.nz", logo: "https://via.placeholder.com/120x60?text=NZSE" },
-  { name: "Air New Zealand Aviation Institute", url: "https://www.airneeding.com", logo: "https://via.placeholder.com/120x60?text=Air+NZ" },
-  { name: "KAURI ACADEMY", url: "https://www.kauri.ac.nz", logo: "https://via.placeholder.com/120x60?text=KAURI" },
-  { name: "New Zealand Career College - ACG Group/UP Education", url: "https://www.nzcc.ac.nz", logo: "https://via.placeholder.com/120x60?text=NZCC" },
+  { name: "NZMA - ACG Group/UP Education", url: "https://www.nzma.edu.nz", logo: "/src/assets/Newzeland/aut.jpeg"  },
+  { name: "University of Canterbury", url: "https://www.canterbury.ac.nz", logo: "/src/assets/Newzeland/uocn.jpeg" },
+  { name: "University of Otago", url: "https://www.waikato.ac.nz/int/", logo: "/src/assets/Newzeland/uooago.jpeg"},
+  { name: "Lincoln University", url: "https://www.lincoln.ac.nz", logo: "/src/assets/Newzeland/lu.jpeg"},
+  { name: "Massey University ", url: "https://www.massey.ac.nz", logo: "/src/assets/Newzeland/mu.jpeg" },
+  { name: "Victoria University of Wellington", url: "https://www.wgtn.ac.nz", logo: "/src/assets/Newzeland/vuow.jpeg" },
+  { name: "University of Auckland ", url: "https://www.auckland.ac.nz/en.html", logo: "/src/assets/Newzeland/uoan.jpeg"},
+  { name: "NMIT", url: "https://www.nmit.ac.nz", logo: "/src/assets/Newzeland/nmit.jpeg" },
+  { name: "Weltec", url: "https://www.whitireiaweltec.ac.nz", logo: "/src/assets/Newzeland/wtech.jpeg"},
+  { name: "EIT", url: "https://www.eit.ac.nz", logo: "/src/assets/Newzeland/eit.jpeg" },
+  { name: "WINTEC ", url: "https://www.wintec.ac.nz", logo: "/src/assets/Newzeland/wintec.jpeg"},
+  { name: "WITT ", url: "https://www.witt.ac.nz", logo: "/src/assets/Newzeland/witt.jpeg"},
+  { name: "Manukau Institute of Technology (MIT) ", url: "https://www.manukau.ac.nz", logo: "/src/assets/Newzeland/manukau.jpeg"},
+  { name: "Northtec", url: "https://www.northtec.ac.nz", logo: "/src/assets/Newzeland/nortec.jpeg"},
+
 ];
 
 const StudyNewZealandPage = () => {
