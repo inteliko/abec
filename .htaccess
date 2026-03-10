@@ -1,0 +1,16 @@
+# SPA fallback for Vite + React Router (history mode)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve files directly when they exist
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # All other routes go to index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Optional: disable directory listing
+Options -Indexes

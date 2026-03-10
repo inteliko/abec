@@ -2,7 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Index from "./pages/Index";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
@@ -17,11 +18,36 @@ import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import NotFound from "./pages/NotFound";
 
+import PageTransition from "./components/PageTransition";
+
 // floating WhatsApp button
 import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait" initial={false}>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageTransition><Index /></PageTransition>} />
+        <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
+        <Route path="/services" element={<PageTransition><ServicesPage /></PageTransition>} />
+        <Route path="/blog" element={<PageTransition><BlogPage /></PageTransition>} />
+        <Route path="/blog/:id" element={<PageTransition><BlogPostPage /></PageTransition>} />
+        <Route path="/study-in-australia" element={<PageTransition><StudyAustraliaPage /></PageTransition>} />
+        <Route path="/study-in-uk" element={<PageTransition><StudyUKPage /></PageTransition>} />
+        <Route path="/study-in-canada" element={<PageTransition><StudyCanadaPage /></PageTransition>} />
+        <Route path="/study-in-new-zealand" element={<PageTransition><StudyNewZealandPage /></PageTransition>} />
+        <Route path="/study-in-asia" element={<PageTransition><StudyAsiaPage /></PageTransition>} />
+        <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
+        <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -31,20 +57,7 @@ const App = () => (
       <WhatsAppFloatingButton />
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:id" element={<BlogPostPage />} />
-          <Route path="/study-in-australia" element={<StudyAustraliaPage />} />
-          <Route path="/study-in-uk" element={<StudyUKPage />} />
-          <Route path="/study-in-canada" element={<StudyCanadaPage />} />
-          <Route path="/study-in-new-zealand" element={<StudyNewZealandPage />} />
-          <Route path="/study-in-asia" element={<StudyAsiaPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AnimatedRoutes />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

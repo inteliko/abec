@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export interface BlogPost {
@@ -15,7 +16,13 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   return (
-    <div className="bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.45 }}
+      className="bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+    >
       <img
         src={post.image}
         alt={post.title}
@@ -34,7 +41,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           Read More →
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

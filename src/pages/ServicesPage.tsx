@@ -24,14 +24,16 @@ const ServicesPage = () => {
         <div className="container text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4"
           >
             Our Services
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: 0.1 }}
             className="text-primary-foreground/70 text-lg max-w-2xl mx-auto"
           >
